@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: -apple-system, system-ui, sans-serif;
+
+  background: linear-gradient(to right, rgb(15, 32, 39), rgb(32, 58, 67), rgb(44, 83, 100));
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+ 
+.todo {
+  width: 750px;
+  height: 530px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 13px -1px #000000;
+  font-size: 14px;
+
+  &__sidebar {
+    padding: 60px 14px;
+
+    width: 223px;
+    height: 100%;
+
+    background-color: #F4F6F8;
+  }
+}
+
+.list-popup {
+  position: relative;
+  top: -20px;
+
+  width: 235px;
+  height: 148px;                
+  padding: 18px;
+
+  background-color: #FFFFFF;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+
+  &__colors {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__close {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    border-radius: 50%;
+  }
+}
+
+.field {
+  background: #FFFFFF;
+  border: thin solid #EFEFEF;
+  border-radius: 4px;
+
+  height: 32px;
+
+  padding-left: 12px;
+  padding-right: 20px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+
+.button {
+  background-color: #4DD599;
+  border-radius: 4px;
+  border: none;
+
+  padding: 10px 20px;
+
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.15px;
+  color: #FFFFFF;
+
+  transition: background-color 0.2s linear;
+
+  &:hover {
+    background-color: darken(#4DD599, 6%);
+  }
+  
+  &:active {
+    background-color: darken(#4DD599, 10%);
+  }
+
+  &--big {
+    width: 100%;
+  }
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__item {
+    cursor: pointer;
+
+    .badge {
+      display: block;
+      border: thin solid transparent;
+
+      width: 20px;
+      height: 20px;
+
+      &--active {
+        border: thin solid black;
+      }
+    }
+  }
+}
